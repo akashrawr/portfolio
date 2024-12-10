@@ -242,7 +242,7 @@ section {
   color: var(--accent-1);
 }
 .project-card > h3 {
-  font-size: 14px;
+  font-size: 18px;
   color: var(--secondary-color);
 }
 

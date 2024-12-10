@@ -160,7 +160,7 @@ section {
 .hero-main-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
   gap: 16px;
 }
@@ -178,7 +178,7 @@ section {
 }
 
 .hero-text-container > h2 {
-  font-size: 28px;
+  font-size: 16px;
   color: var(--accent-1);
 }
 
@@ -237,14 +237,7 @@ section {
     text-align: left;
   }
 }
-.hero-text-container > h2 {
-  font-size: 22px;
-  color: var(--accent-1);
-}
-.project-card > h3 {
-  font-size: 14px;
-  color: var(--secondary-color);
-}
+
 
 /* ABOUT */
 

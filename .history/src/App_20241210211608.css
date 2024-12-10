@@ -241,10 +241,7 @@ section {
   font-size: 22px;
   color: var(--accent-1);
 }
-.project-card > h3 {
-  font-size: 14px;
-  color: var(--secondary-color);
-}
+
 
 /* ABOUT */
 
