@@ -724,31 +724,43 @@ footer {
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 25px; /* Rounded edges for the slider */
-  display: flex;
-  
-  align-items: center;
 }
 
-/* Adjust the icon size to 48x48 pixels */
-.slider .icon {
+.slider:before {
   position: absolute;
-  width: 50px;  
-  height: 50px; 
+  content: "";
+  height: 20px; /* Explicitly set knob size */
+  width: 20px;  /* Explicitly set knob size */
+  left: 2px;    /* Adjust knob alignment */
+  bottom: 2px;  /* Keep the knob vertically centered */
+  background-color: white;
+  -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 50%; /* Ensures the knob is circular */
 }
 
 /* When the input is checked (dark mode is on) */
 input:checked + .slider {
-  background-color: #3e4346; /* Change background color on check */
+  background-color: #2196F3; /* Change background color on check */
 }
 
 input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-/* Move the icons when the input is checked (dark mode) */
-input:checked + .slider .icon {
-  transform: translateX(20px); /* Move the icon to the right */
+input:checked + .slider:before {
+  -webkit-transform: translateX(25px); /* Move knob to the right */
+  -ms-transform: translateX(25px);
+  transform: translateX(25px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 25px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 /* Responsive Adjustments */
@@ -758,13 +770,15 @@ input:checked + .slider .icon {
     height: 22px; /* Adjust height to match */
   }
 
-  .slider .icon {
-    width: 36px;  /* Smaller icon size on smaller screens */
-    height: 36px; /* Smaller icon size on smaller screens */
+  .slider:before {
+    height: 18px; /* Adjust knob size */
+    width: 18px;  /* Adjust knob size */
+    left: 1px;    /* Adjust knob alignment */
+    bottom: 2px;  /* Keep the knob vertically aligned */
   }
 
-  input:checked + .slider .icon {
-    transform: translateX(12px); /* Adjust the translation to fit smaller size */
+  input:checked + .slider:before {
+    transform: translateX(22px); /* Adjust the translation to fit smaller size */
   }
 }
 
@@ -774,12 +788,14 @@ input:checked + .slider .icon {
     height: 20px; /* Adjust height for compact layout */
   }
 
-  .slider .icon {
-    width: 32px; /* Further reduced icon size for very small screens */
-    height: 32px; /* Further reduced icon size for very small screens */
+  .slider:before {
+    height: 16px; /* Smaller knob size */
+    width: 16px;  /* Smaller knob size */
+    left: 2px;    /* Align knob properly */
+    bottom: 2px;  /* Adjust vertical alignment */
   }
 
-  input:checked + .slider .icon {
-    transform: translateX(8px); /* Adjust translation for the smaller size */
+  input:checked + .slider:before {
+    transform: translateX(20px); /* Adjust translation for the smaller size */
   }
 }

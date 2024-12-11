@@ -64,24 +64,13 @@ function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
             <a className="nav-link" href="#contact">Contact</a>
           </li>
           <li>
-          <label className="switch" aria-label="Toggle dark mode">
-  <input
-    type="checkbox"
-    checked={darkMode}
-    onChange={toggleDarkMode}
-    aria-checked={darkMode}
-  />
-  <span className="slider round">
-    {/* Display sun icon when darkMode is false (light mode) */}
-    {!darkMode ? (
-      <img className="icon" src="./assets/icons/sun.svg" alt="Light Mode" />
-    ) : (
-      // Display moon icon when darkMode is true (dark mode)
-      <img className="icon" src="./assets/icons/moon.svg" alt="Dark Mode" />
-    )}
-  </span>
-</label>
-
+            <button className="theme-toggle" onClick={toggleDarkMode} aria-label="Toggle dark mode">
+              <img
+                className="nav-icons"
+                src={`./assets/icons/${darkMode ? 'sun' : 'moon'}.svg`}
+                alt={darkMode ? 'Light Mode' : 'Dark Mode'}
+              />
+            </button>
           </li>
         </ul>
       </nav>
@@ -157,7 +146,7 @@ function About() {
                 <img src="./assets/icons/icon-typescript.svg" alt="typescript-icon" />
               </div>
               <div className="tech-stack">
-                <img src="./assets/icons/icon-c++.svg" alt="c++-icon" />
+                <img class="about-icon" src="./assets/icons/icon-c++.svg" alt="c++-icon" />
               </div>
               <div className="tech-stack">
                 <img src="./assets/icons/icon-python.svg" alt="python-icon" />

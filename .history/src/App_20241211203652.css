@@ -696,7 +696,6 @@ footer {
 .primary-nav.visible {
   transform: translateX(0%);
 }
-
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -723,63 +722,41 @@ footer {
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
-  border-radius: 25px; /* Rounded edges for the slider */
-  display: flex;
-  
-  align-items: center;
+  border-radius: 30px; /* Ensures the slider has rounded edges */
 }
 
-/* Adjust the icon size to 48x48 pixels */
-.slider .icon {
+.slider:before {
   position: absolute;
-  width: 50px;  
-  height: 50px; 
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 2px; /* Adjust to center the circle within the slider */
+  bottom: 2px; /* Adjust to center the circle vertically */
+  background-color: white;
+  -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 50%; /* Ensures the slider's knob is round */
 }
 
-/* When the input is checked (dark mode is on) */
 input:checked + .slider {
-  background-color: #3e4346; /* Change background color on check */
+  background-color: #2196F3;
 }
 
 input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-/* Move the icons when the input is checked (dark mode) */
-input:checked + .slider .icon {
-  transform: translateX(20px); /* Move the icon to the right */
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px); /* This moves the slider's knob when checked */
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .switch {
-    width: 45px;  /* Slightly smaller on smaller devices */
-    height: 22px; /* Adjust height to match */
-  }
-
-  .slider .icon {
-    width: 36px;  /* Smaller icon size on smaller screens */
-    height: 36px; /* Smaller icon size on smaller screens */
-  }
-
-  input:checked + .slider .icon {
-    transform: translateX(12px); /* Adjust the translation to fit smaller size */
-  }
+/* Rounded sliders */
+.slider.round {
+  border-radius: 30px;
 }
 
-@media (max-width: 480px) {
-  .switch {
-    width: 40px;  /* Even smaller on very small devices */
-    height: 20px; /* Adjust height for compact layout */
-  }
-
-  .slider .icon {
-    width: 32px; /* Further reduced icon size for very small screens */
-    height: 32px; /* Further reduced icon size for very small screens */
-  }
-
-  input:checked + .slider .icon {
-    transform: translateX(8px); /* Adjust translation for the smaller size */
-  }
+.slider.round:before {
+  border-radius: 50%;
 }

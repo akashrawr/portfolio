@@ -725,21 +725,30 @@ footer {
   transition: .4s;
   border-radius: 25px; /* Rounded edges for the slider */
   display: flex;
-  
+  justify-content: center;
   align-items: center;
 }
 
-/* Adjust the icon size to 48x48 pixels */
+/* Position the icons inside the slider */
 .slider .icon {
   position: absolute;
-  width: 50px;  
-  height: 50px; 
+  width: 48px;  /* Icon size changed to 48px */
+  height: 48px; /* Icon size changed to 48px */
   transition: .4s;
+}
+
+/* Position the sun and moon icons */
+.slider .sun {
+  left: 3px; /* Align the sun icon to the left */
+}
+
+.slider .moon {
+  right: 3px; /* Align the moon icon to the right */
 }
 
 /* When the input is checked (dark mode is on) */
 input:checked + .slider {
-  background-color: #3e4346; /* Change background color on check */
+  background-color: #2196F3; /* Change background color on check */
 }
 
 input:focus + .slider {
@@ -747,8 +756,12 @@ input:focus + .slider {
 }
 
 /* Move the icons when the input is checked (dark mode) */
-input:checked + .slider .icon {
-  transform: translateX(20px); /* Move the icon to the right */
+input:checked + .slider .sun {
+  transform: translateX(26px); /* Move the sun icon to the right */
+}
+
+input:checked + .slider .moon {
+  transform: translateX(-26px); /* Move the moon icon to the left */
 }
 
 /* Responsive Adjustments */
@@ -763,8 +776,12 @@ input:checked + .slider .icon {
     height: 36px; /* Smaller icon size on smaller screens */
   }
 
-  input:checked + .slider .icon {
-    transform: translateX(12px); /* Adjust the translation to fit smaller size */
+  input:checked + .slider .sun {
+    transform: translateX(18px); /* Adjust the movement for smaller screens */
+  }
+
+  input:checked + .slider .moon {
+    transform: translateX(-18px); /* Adjust the movement for smaller screens */
   }
 }
 
@@ -779,7 +796,11 @@ input:checked + .slider .icon {
     height: 32px; /* Further reduced icon size for very small screens */
   }
 
-  input:checked + .slider .icon {
-    transform: translateX(8px); /* Adjust translation for the smaller size */
+  input:checked + .slider .sun {
+    transform: translateX(12px); /* Adjust for very small screens */
+  }
+
+  input:checked + .slider .moon {
+    transform: translateX(-12px); /* Adjust for very small screens */
   }
 }

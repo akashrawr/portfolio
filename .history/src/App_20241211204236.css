@@ -725,21 +725,20 @@ footer {
   transition: .4s;
   border-radius: 25px; /* Rounded edges for the slider */
   display: flex;
-  
+  justify-content: center;
   align-items: center;
 }
 
-/* Adjust the icon size to 48x48 pixels */
 .slider .icon {
   position: absolute;
-  width: 50px;  
-  height: 50px; 
+  width: 16px;  /* Icon size */
+  height: 16px;
   transition: .4s;
 }
 
 /* When the input is checked (dark mode is on) */
 input:checked + .slider {
-  background-color: #3e4346; /* Change background color on check */
+  background-color: #2196F3; /* Change background color on check */
 }
 
 input:focus + .slider {
@@ -748,7 +747,7 @@ input:focus + .slider {
 
 /* Move the icons when the input is checked (dark mode) */
 input:checked + .slider .icon {
-  transform: translateX(20px); /* Move the icon to the right */
+  transform: translateX(18px); /* Move the icon to the right */
 }
 
 /* Responsive Adjustments */
@@ -758,13 +757,10 @@ input:checked + .slider .icon {
     height: 22px; /* Adjust height to match */
   }
 
-  .slider .icon {
-    width: 36px;  /* Smaller icon size on smaller screens */
-    height: 36px; /* Smaller icon size on smaller screens */
-  }
+
 
   input:checked + .slider .icon {
-    transform: translateX(12px); /* Adjust the translation to fit smaller size */
+    transform: translateX(15px); /* Adjust the translation to fit smaller size */
   }
 }
 
@@ -775,11 +771,11 @@ input:checked + .slider .icon {
   }
 
   .slider .icon {
-    width: 32px; /* Further reduced icon size for very small screens */
-    height: 32px; /* Further reduced icon size for very small screens */
+    width: 12px; /* Smaller icon size */
+    height: 12px; /* Smaller icon size */
   }
 
   input:checked + .slider .icon {
-    transform: translateX(8px); /* Adjust translation for the smaller size */
+    transform: translateX(12px); /* Adjust translation for the smaller size */
   }
 }

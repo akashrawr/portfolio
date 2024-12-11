@@ -64,24 +64,15 @@ function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
             <a className="nav-link" href="#contact">Contact</a>
           </li>
           <li>
-          <label className="switch" aria-label="Toggle dark mode">
-  <input
-    type="checkbox"
-    checked={darkMode}
-    onChange={toggleDarkMode}
-    aria-checked={darkMode}
-  />
-  <span className="slider round">
-    {/* Display sun icon when darkMode is false (light mode) */}
-    {!darkMode ? (
-      <img className="icon" src="./assets/icons/sun.svg" alt="Light Mode" />
-    ) : (
-      // Display moon icon when darkMode is true (dark mode)
-      <img className="icon" src="./assets/icons/moon.svg" alt="Dark Mode" />
-    )}
-  </span>
-</label>
-
+            <label className="switch" aria-label="Toggle dark mode">
+              <input 
+                type="checkbox" 
+                checked={darkMode} 
+                onChange={toggleDarkMode} 
+                aria-checked={darkMode}
+              />
+              <span className="slider round"></span>
+            </label>
           </li>
         </ul>
       </nav>

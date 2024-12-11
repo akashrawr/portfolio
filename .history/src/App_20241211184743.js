@@ -9,32 +9,26 @@ function App() {
   }, []);
 
   const [isNavVisible, setIsNavVisible] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
 
   const toggleNav = () => {
     setIsNavVisible(!isNavVisible);
   };
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.body.classList.toggle('dark-mode', !darkMode);
-  };
-
   return (
     <div>
-      <Header
-        isNavVisible={isNavVisible}
-        toggleNav={toggleNav}
-        darkMode={darkMode}
-        toggleDarkMode={toggleDarkMode}
-      />
+      <Header isNavVisible={isNavVisible} toggleNav={toggleNav} />
       <Main />
       <Footer />
     </div>
   );
 }
 
-function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
+const toggleDarkMode = () => {
+  setDarkMode(!darkMode);
+  document.body.classList.toggle("dark-mode", !darkMode);
+};
+
+function Header({ isNavVisible, toggleNav }) {
   return (
     <header>
       <nav className="navbar-nav">
@@ -64,24 +58,17 @@ function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
             <a className="nav-link" href="#contact">Contact</a>
           </li>
           <li>
-          <label className="switch" aria-label="Toggle dark mode">
-  <input
-    type="checkbox"
-    checked={darkMode}
-    onChange={toggleDarkMode}
-    aria-checked={darkMode}
-  />
-  <span className="slider round">
-    {/* Display sun icon when darkMode is false (light mode) */}
-    {!darkMode ? (
-      <img className="icon" src="./assets/icons/sun.svg" alt="Light Mode" />
-    ) : (
-      // Display moon icon when darkMode is true (dark mode)
-      <img className="icon" src="./assets/icons/moon.svg" alt="Dark Mode" />
-    )}
-  </span>
-</label>
-
+          <button 
+            className="theme-toggle" 
+            onClick={toggleDarkMode}
+            aria-label="Toggle dark mode"
+          >
+            <img 
+              src={darkMode ? "sun.svg" : "moon.svg"} 
+              alt={darkMode ? "Light mode" : "Dark mode"} 
+              className="theme-icon" 
+            />
+          </button>
           </li>
         </ul>
       </nav>

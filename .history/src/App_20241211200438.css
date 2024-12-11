@@ -9,7 +9,6 @@
   --neutral-2: white;
   --neutral-3: white;
   --neutral-4: black;
-  --icon-1: black;
 
   --dark-primary-color: #121212;
   --dark-secondary-color: #1f1f1f;
@@ -17,9 +16,9 @@
   --dark-accent-2: #adb5bd;
   --dark-neutral-1: #ffffff;
   --dark-neutral-2: #121212;
-  --dark-neutral-3:#1f1f1f;
+  --dark-neutral-3:rgb(35,43,43);
   --dark-neutral-4: #938f8f;
-  --dark-icon-1: white; 
+
 
 }
 
@@ -54,7 +53,6 @@ body.dark-mode {
   --neutral-2: var(--dark-neutral-2);
   --neutral-3: var(--dark-neutral-3);
   --neutral-4: var(--dark-neutral-4);
-  --icon-1:var(--dark-icon-1);
 }
 
 
@@ -445,15 +443,14 @@ section {
 .project-card-links > a {
   display: flex;
   align-items: center;
-  color: var(--neutral-4);
+
   font-size: 10px;
   gap: 4px;
 }
 
 .project-card-links > a:link,
 .project-card-links > a:visited {
-
-  color: var(--neutral-4);
+  color: var(--primary-color);
 }
 
 /* CONTACT */
@@ -472,7 +469,7 @@ section {
   gap: 12px;
 }
 .contact-card > h2 {
-    color: var(--neutral-4);
+  color: var(--neutral-4);
 }
 
 .contact-card > p {
@@ -490,11 +487,12 @@ section {
   display: flex;
   align-items: center;
   gap: 8px;
+  color: var(--neutral-4);
 }
 
 .contact-links > a:link,
 .contact-links > a:visited {
-  color: var(--neutral-4);
+  color: var(--secondary-color);
 }
 
 .contact-icons {
@@ -522,7 +520,7 @@ footer {
   justify-content: center;
   color: var(--accent-2);
   max-width: 100vw;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   min-height: 150px;
 }
 
@@ -695,91 +693,4 @@ footer {
 /* Adjust specific sections as needed for React-specific behaviors */
 .primary-nav.visible {
   transform: translateX(0%);
-}
-
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 25px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 25px; /* Rounded edges for the slider */
-  display: flex;
-  
-  align-items: center;
-}
-
-/* Adjust the icon size to 48x48 pixels */
-.slider .icon {
-  position: absolute;
-  width: 50px;  
-  height: 50px; 
-  transition: .4s;
-}
-
-/* When the input is checked (dark mode is on) */
-input:checked + .slider {
-  background-color: #3e4346; /* Change background color on check */
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-/* Move the icons when the input is checked (dark mode) */
-input:checked + .slider .icon {
-  transform: translateX(20px); /* Move the icon to the right */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .switch {
-    width: 45px;  /* Slightly smaller on smaller devices */
-    height: 22px; /* Adjust height to match */
-  }
-
-  .slider .icon {
-    width: 36px;  /* Smaller icon size on smaller screens */
-    height: 36px; /* Smaller icon size on smaller screens */
-  }
-
-  input:checked + .slider .icon {
-    transform: translateX(12px); /* Adjust the translation to fit smaller size */
-  }
-}
-
-@media (max-width: 480px) {
-  .switch {
-    width: 40px;  /* Even smaller on very small devices */
-    height: 20px; /* Adjust height for compact layout */
-  }
-
-  .slider .icon {
-    width: 32px; /* Further reduced icon size for very small screens */
-    height: 32px; /* Further reduced icon size for very small screens */
-  }
-
-  input:checked + .slider .icon {
-    transform: translateX(8px); /* Adjust translation for the smaller size */
-  }
 }

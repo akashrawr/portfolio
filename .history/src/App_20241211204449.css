@@ -701,7 +701,7 @@ footer {
 .switch {
   position: relative;
   display: inline-block;
-  width: 50px;
+  width: 30px;
   height: 25px;
 }
 
@@ -725,21 +725,21 @@ footer {
   transition: .4s;
   border-radius: 25px; /* Rounded edges for the slider */
   display: flex;
-  
+  justify-content: center;
   align-items: center;
 }
 
 /* Adjust the icon size to 48x48 pixels */
 .slider .icon {
   position: absolute;
-  width: 50px;  
-  height: 50px; 
+  width: 48px;  /* Icon size changed to 48px */
+  height: 48px; /* Icon size changed to 48px */
   transition: .4s;
 }
 
 /* When the input is checked (dark mode is on) */
 input:checked + .slider {
-  background-color: #3e4346; /* Change background color on check */
+  background-color: #2196F3; /* Change background color on check */
 }
 
 input:focus + .slider {
@@ -748,7 +748,7 @@ input:focus + .slider {
 
 /* Move the icons when the input is checked (dark mode) */
 input:checked + .slider .icon {
-  transform: translateX(20px); /* Move the icon to the right */
+  transform: translateX(18px); /* Move the icon to the right */
 }
 
 /* Responsive Adjustments */
