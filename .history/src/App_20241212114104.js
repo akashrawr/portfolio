@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faJava, faHtml5, faJs, faPython, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { SiTypescript, SiCplusplus } from 'react-icons/si';
+import { SiTypescript, SiCplusplus, FaGithub } from 'react-icons/si';
 import { faLaptopCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -88,6 +88,49 @@ function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
             </span>
           </label>
           </li>
+                    <li>
+            <label className="switch" aria-label="Toggle dark mode">
+            <input
+              type="checkbox"
+              checked={darkMode}
+              onChange={toggleDarkMode}
+              aria-checked={darkMode}
+            />
+            <span className="slider round">
+              {/* Display sun icon when darkMode is false (light mode) */}
+              {!darkMode ? (
+                <img className="icon" src="./assets/icons/sun.svg" alt="Light Mode" />
+              ) : (
+                // Display moon icon when darkMode is true (dark mode)
+                <img className="icon" src="./assets/icons/moon.svg" alt="Dark Mode" />
+              )}
+            </span>
+          </label>
+          </li>
+
+          <li>
+          <label for="theme" class="theme">
+	<span>Light</span>
+	<span class="theme__toggle-wrap">
+		<input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+		<span class="theme__fill"></span>
+		<span class="theme__icon">
+			<span class="theme__icon-part"></span>
+			<span class="theme__icon-part"></span>
+			<span class="theme__icon-part"></span>
+			<span class="theme__icon-part"></span>
+			<span class="theme__icon-part"></span>
+			<span class="theme__icon-part"></span>
+			<span class="theme__icon-part"></span>
+			<span class="theme__icon-part"></span>
+			<span class="theme__icon-part"></span>
+		</span>
+	</span>
+	<span>Dark</span>
+</label>
+          </li>
+
+          
         </ul>
       </nav>
     </header>

@@ -3,9 +3,9 @@ import './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faJava, faHtml5, faJs, faPython, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { SiTypescript, SiCplusplus } from 'react-icons/si';
-import { faLaptopCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faReact, faJava, faHtml5, faJs, faPython, faGithub} from '@fortawesome/free-brands-svg-icons';
+import { SiTypescript, SiCplusplus, FaGithub } from 'react-icons/si';
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -70,23 +70,24 @@ function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
             <a className="nav-link" href="#contact">Contact</a>
           </li>
           <li>
-            <label className="switch" aria-label="Toggle dark mode">
-            <input
-              type="checkbox"
-              checked={darkMode}
-              onChange={toggleDarkMode}
-              aria-checked={darkMode}
-            />
-            <span className="slider round">
-              {/* Display sun icon when darkMode is false (light mode) */}
-              {!darkMode ? (
-                <img className="icon" src="./assets/icons/sun.svg" alt="Light Mode" />
-              ) : (
-                // Display moon icon when darkMode is true (dark mode)
-                <img className="icon" src="./assets/icons/moon.svg" alt="Dark Mode" />
-              )}
-            </span>
-          </label>
+          <label className="switch" aria-label="Toggle dark mode">
+  <input
+    type="checkbox"
+    checked={darkMode}
+    onChange={toggleDarkMode}
+    aria-checked={darkMode}
+  />
+  <span className="slider round">
+    {/* Display sun icon when darkMode is false (light mode) */}
+    {!darkMode ? (
+      <img className="icon" src="./assets/icons/sun.svg" alt="Light Mode" />
+    ) : (
+      // Display moon icon when darkMode is true (dark mode)
+      <img className="icon" src="./assets/icons/moon.svg" alt="Dark Mode" />
+    )}
+  </span>
+</label>
+
           </li>
         </ul>
       </nav>

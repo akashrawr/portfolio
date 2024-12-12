@@ -3,8 +3,8 @@ import './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faJava, faHtml5, faJs, faPython, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { SiTypescript, SiCplusplus } from 'react-icons/si';
+import { faReact, faJava, faHtml5, faJs, faPython, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { SiTypescript, SiCplusplus, FaGithub } from 'react-icons/si';
 import { faLaptopCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 

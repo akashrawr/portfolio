@@ -169,23 +169,23 @@ h1 {
   }
 
   .mobile-nav-toggle[aria-expanded="true"] {
-    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="%23a5c9ca"%3E%3Cpath d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"%3E%3C/path%3E%3C/svg%3E') center center no-repeat;
+    background: url(mobile-icon-exit.svg) center center no-repeat;
   }
-  
+
   .mobile-nav-toggle {
     display: block;
     position: absolute;
-    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="%23a5c9ca"%3E%3Cpath d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"%3E%3C/path%3E%3C/svg%3E') center center no-repeat;
-  
+    background: url(mobile-icon.svg) center center no-repeat;
+
     width: 1.25rem;
     aspect-ratio: 1;
-  
+
     border: none;
-  
+
     top: 1.4rem;
     right: 2.5rem;
     z-index: 10000;
-  
+
     transition: 250ms ease-in-out;
   }
 }
@@ -274,15 +274,7 @@ section {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--secondary-color);
-  background-color: var(--neutral-2);
-
-  width: 100%;
-
-
-  box-shadow: 4px 4px 0px var(--accent-1);
 }
-
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
@@ -773,6 +765,53 @@ input:not(:checked) + .slider .icon {
   transform: translateX(-15px) translateY(-2px); /* Icon remains in the default position */
   width: 52px; /* Further reduced icon size for very small screens */
   height: 52px; /* Further reduced icon size for very small screens */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .switch {
+    width: 45px;  /* Slightly smaller on smaller devices */
+    height: 22px; /* Adjust height to match */
+    position: absolute; /* Positioning switch relative to the toggle button */
+    top: 1.4rem;
+    right: 4rem; /* Place to the left of the toggle button */
+  }
+
+  .slider .icon {
+    width: 38px;  /* Smaller icon size on smaller screens */
+    height: 38px; /* Smaller icon size on smaller screens */
+  }
+
+  input:checked + .slider .icon {
+    transform: translateX(18px); /* Adjust the translation to fit smaller size */
+  }
+
+  input:not(:checked) + .slider .icon {
+    transform: translateX(-14px) translateY(-1px); /* Adjust the translation for very small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .switch {
+    width: 40px;  /* Even smaller on very small devices */
+    height: 20px; /* Adjust height for compact layout */
+    position: absolute; /* Positioning switch relative to the toggle button */
+    top: 1.4rem;
+    right: 3.5rem; /* Place to the left of the toggle button */
+  }
+
+  .slider .icon {
+    width: 35px; /* Further reduced icon size for very small screens */
+    height: 35px; /* Further reduced icon size for very small screens */
+  }
+
+  input:checked + .slider .icon {
+    transform: translateX(12px); /* Adjust translation for the smaller size */
+  }
+
+  input:not(:checked) + .slider .icon {
+    transform: translateX(-14px) translateY(-1px); /* Adjust the translation for very small screens */
+  }
 }
 
 .about-icon {

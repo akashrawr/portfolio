@@ -3,9 +3,9 @@ import './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faJava, faHtml5, faJs, faPython, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { SiTypescript, SiCplusplus } from 'react-icons/si';
-import { faLaptopCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faReact, faJava, faHtml5, faJs, faPython, faGithub} from '@fortawesome/free-brands-svg-icons';
+import { SiTypescript, SiCplusplus, FaGithub } from 'react-icons/si';
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -70,23 +70,24 @@ function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
             <a className="nav-link" href="#contact">Contact</a>
           </li>
           <li>
-            <label className="switch" aria-label="Toggle dark mode">
-            <input
-              type="checkbox"
-              checked={darkMode}
-              onChange={toggleDarkMode}
-              aria-checked={darkMode}
-            />
-            <span className="slider round">
-              {/* Display sun icon when darkMode is false (light mode) */}
-              {!darkMode ? (
-                <img className="icon" src="./assets/icons/sun.svg" alt="Light Mode" />
-              ) : (
-                // Display moon icon when darkMode is true (dark mode)
-                <img className="icon" src="./assets/icons/moon.svg" alt="Dark Mode" />
-              )}
-            </span>
-          </label>
+          <label className="switch" aria-label="Toggle dark mode">
+  <input
+    type="checkbox"
+    checked={darkMode}
+    onChange={toggleDarkMode}
+    aria-checked={darkMode}
+  />
+  <span className="slider round">
+    {/* Display sun icon when darkMode is false (light mode) */}
+    {!darkMode ? (
+      <img className="icon" src="./assets/icons/sun.svg" alt="Light Mode" />
+    ) : (
+      // Display moon icon when darkMode is true (dark mode)
+      <img className="icon" src="./assets/icons/moon.svg" alt="Dark Mode" />
+    )}
+  </span>
+</label>
+
           </li>
         </ul>
       </nav>
@@ -384,29 +385,46 @@ function Contact() {
       <h2 className="section-highlight" data-aos="fade-up">Contacts</h2>
       <div className="contact-container" data-aos="fade-up">
         <div className="contact-card">
-          <h2>Contacts</h2>
+          <h2> Contacts</h2>
           <p>You can contact me directly through these links</p>
 
           <div className="contact-links">
-            <a href="https://www.instagram.com/_acnologxa" className="contact-link">
-              <FontAwesomeIcon icon={faInstagram} className="contact-icons" />
+            <a href="https://www.instagram.com/_acnologxa">
+              <img
+                className="contact-icons"
+                src="./assets/icons/instagram.svg"
+                alt="Instagram-icon"
+              />
               Instagram
             </a>
 
-            <a href="mailto:akashkm553@gmail.com" className="contact-link">
-              <FontAwesomeIcon icon={faEnvelope} className="contact-icons" />
-              Email
+            <a href="mailto:akashkm553@gmail.com">
+            <img
+              className="contact-icons"
+              src="./assets/icons/email.svg"
+              alt="email-icon"
+            />
+            Email
             </a>
 
-            <a href="https://www.linkedin.com/in/akashmishra-rawr" className="contact-link">
-              <FontAwesomeIcon icon={faLinkedin} className="contact-icons" />
+            <a href="https://www.linkedin.com/in/akashmishra-rawr">
+              <img
+                className="contact-icons"
+                src="./assets/icons/linkedin-icon.svg"
+                alt="linkedin-icon"
+              />
               LinkedIn
             </a>
 
-            <a href="https://github.com/akashrawr" className="contact-link">
-              <FontAwesomeIcon icon={faGithub} className="contact-icons" />
+            <a href="https://github.com/akashrawr">
+              <img
+                className="contact-icons"
+                src="./assets/icons/github.svg"
+                alt="Github-icon"
+              />
               Github
             </a>
+
           </div>
         </div>
       </div>

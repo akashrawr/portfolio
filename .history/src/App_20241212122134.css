@@ -157,7 +157,7 @@ h1 {
     transform: translateX(100%);
     transition: transform 350ms ease-out;
   }
-
+}
   .nav-link:link,
   .nav-link:visited {
     font-size: 20px;
@@ -188,8 +188,7 @@ h1 {
   
     transition: 250ms ease-in-out;
   }
-}
-
+  
 /* Section styles */
 
 section {
@@ -267,6 +266,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .hero-image {
@@ -278,11 +278,9 @@ section {
   background-color: var(--neutral-2);
 
   width: 100%;
+  padding: 1rem;
 
-
-  box-shadow: 4px 4px 0px var(--accent-1);
 }
-
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {

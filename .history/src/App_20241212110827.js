@@ -3,10 +3,9 @@ import './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faJava, faHtml5, faJs, faPython, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { SiTypescript, SiCplusplus } from 'react-icons/si';
-import { faLaptopCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-
+import { faReact, faJava, faHtml5, faJs, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faFileCode } from '@fortawesome/free-solid-svg-icons'; // Fallback for unsupported icons like TypeScript and C++
+import { SiTypescript, SiCplusplus, FaExternalLinkAlt, FaGithub } from 'react-icons/si';
 
 
 function App() {
@@ -70,23 +69,24 @@ function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
             <a className="nav-link" href="#contact">Contact</a>
           </li>
           <li>
-            <label className="switch" aria-label="Toggle dark mode">
-            <input
-              type="checkbox"
-              checked={darkMode}
-              onChange={toggleDarkMode}
-              aria-checked={darkMode}
-            />
-            <span className="slider round">
-              {/* Display sun icon when darkMode is false (light mode) */}
-              {!darkMode ? (
-                <img className="icon" src="./assets/icons/sun.svg" alt="Light Mode" />
-              ) : (
-                // Display moon icon when darkMode is true (dark mode)
-                <img className="icon" src="./assets/icons/moon.svg" alt="Dark Mode" />
-              )}
-            </span>
-          </label>
+          <label className="switch" aria-label="Toggle dark mode">
+  <input
+    type="checkbox"
+    checked={darkMode}
+    onChange={toggleDarkMode}
+    aria-checked={darkMode}
+  />
+  <span className="slider round">
+    {/* Display sun icon when darkMode is false (light mode) */}
+    {!darkMode ? (
+      <img className="icon" src="./assets/icons/sun.svg" alt="Light Mode" />
+    ) : (
+      // Display moon icon when darkMode is true (dark mode)
+      <img className="icon" src="./assets/icons/moon.svg" alt="Dark Mode" />
+    )}
+  </span>
+</label>
+
           </li>
         </ul>
       </nav>
@@ -186,55 +186,63 @@ function Portfolio() {
             <h2>Portfolio</h2>
 
             {/* Project Container */}
-            <div className="project-container">
+            <div class="project-container">
 
               {/* SMS */}
-              <section className="project-card">
+              <section class="project-card">
                 <img
-                  className="project-img"
+                  class="project-img"
                   src="./assets/images/SMS.gif"
                   alt="project-SMS"
                 />
                 <h3>Student Management System</h3>
                 <h5>Project Description</h5>
                 <p>
-                  This is an application built using Spring Boot, adhering to MVC architecture.
+                  This is a application built using Spring Boot, adhering to MVC architecture.
                   It provides functionalities for managing student records.
                 </p>
 
-                <div className="project-card-links">
-                  <a href="https://github.com/akashrawr/Student-Management-System-Springboot.git" className="project-link">
-                    <FontAwesomeIcon icon={faGithub} className="project-icons" />
+                <div class="project-card-links">
+                  <a href="https://github.com/akashrawr/Student-Management-System-Springboot.git">
+                    <img
+                      class="project-icons"
+                      src="./assets/icons/github-icon.svg"
+                      alt="github-link"
+                    />
                     Repository
                   </a>
                 </div>
               </section>
-
+              
               {/* Health Appointment Website */}
-              <section className="project-card">
+              <section class="project-card">
                 <img
-                  className="project-img"
+                  class="project-img"
                   src="./assets/images/health.gif"
                   alt="project-Health"
                 />
                 <h3>Health Appointment Website</h3>
                 <h5>Project Description</h5>
                 <p>
-                  A user-friendly web application built using ASP.NET, designed to manage patient appointments efficiently.
+                  A user-friendly web application built using ASP.NET, designed to manage patient appointments efficiently. 
                 </p>
 
-                <div className="project-card-links">
-                  <a href="https://github.com/akashrawr/Medical_Website.git" className="project-link">
-                    <FontAwesomeIcon icon={faGithub} className="project-icons" />
+                <div class="project-card-links">
+                  <a href="https://github.com/akashrawr/Medical_Website.git">
+                    <img
+                      class="project-icons"
+                      src="./assets/icons/github-icon.svg"
+                      alt="github-link"
+                    />
                     Repository
                   </a>
                 </div>
               </section>
 
               {/* Chess */}
-              <section className="project-card">
+              <section class="project-card">
                 <img
-                  className="project-img"
+                  class="project-img"
                   src="./assets/images/chess.gif"
                   alt="project-Chess"
                 />
@@ -244,130 +252,164 @@ function Portfolio() {
                   A Java RMI-based chess game capable of hosting up to six players simultaneously.
                 </p>
 
-                <div className="project-card-links">
-                  <a href="https://github.com/akashrawr/ChessRMI.git" className="project-link">
-                    <FontAwesomeIcon icon={faGithub} className="project-icons" />
+                <div class="project-card-links">
+                  <a href="https://github.com/akashrawr/ChessRMI.git">
+                    <img
+                      class="project-icons"
+                      src="./assets/icons/github-icon.svg"
+                      alt="github-link"
+                    />
                     Repository
                   </a>
                 </div>
               </section>
 
               {/* Rock-Paper-Scissors */}
-              <section className="project-card">
+              <section class="project-card">
                 <img
-                  className="project-img"
+                  class="project-img"
                   src="./assets/images/rps.gif"
                   alt="project-RPS"
                 />
                 <h3>Rock-Paper-Scissors</h3>
                 <h5>Project Description</h5>
                 <p>
-                  A multiplayer game using Java RMI, allowing two players to compete in real-time and a MySQL database for user tracking.
+                  A multiplayer game using Java RMI, allowing two players to compete in real-time and a MySQL database for user tracking. 
                 </p>
 
-                <div className="project-card-links">
-                  <a href="https://github.com/akashrawr/RockPaperScissors-RMI.git" className="project-link">
-                    <FontAwesomeIcon icon={faGithub} className="project-icons" />
+                <div class="project-card-links">
+                  <a href="https://github.com/akashrawr/RockPaperScissors-RMI.git">
+                    <img
+                      class="project-icons"
+                      src="./assets/icons/github-icon.svg"
+                      alt="github-link"
+                    />
                     Repository
                   </a>
                 </div>
               </section>
 
               {/* Weather App */}
-              <section className="project-card">
+              <section class="project-card">
                 <img
-                  className="project-img"
+                  class="project-img"
                   src="./assets/images/weather.gif"
                   alt="project-Weather-App"
                 />
                 <h3>Weather App</h3>
                 <h5>Project Description</h5>
                 <p>
-                  A weather forecasting application built using React and TypeScript. It utilizes an external API to fetch real-time weather data.
+                  A weather forecasting application built using React and TypeScript. 
+                  It utilizes an external API to fetch real-time weather data.
                 </p>
 
-                <div className="project-card-links">
-                  <a href="https://weatherapp-react-ts.vercel.app/" className="project-link">
-                    <FontAwesomeIcon icon={faLaptopCode} className="project-icons" />
+                <div class="project-card-links">
+                  <a href="https://weatherapp-react-ts.vercel.app/">
+                    <img
+                      class="project-icons"
+                      src="./assets/icons/live-demo.svg"
+                      alt="live-demo"
+                    />
                     Live Demo
                   </a>
-                  <a href="https://github.com/akashrawr/WeatherApp-React-TS.git" className="project-link">
-                    <FontAwesomeIcon icon={faGithub} className="project-icons" />
+                  <a href="https://github.com/akashrawr/WeatherApp-React-TS.git">
+                    <img
+                      class="project-icons"
+                      src="./assets/icons/github-icon.svg"
+                      alt="github-link"
+                    />
                     Repository
                   </a>
                 </div>
               </section>
 
+              
               {/* Movie List App */}
-              <section className="project-card">
+              <section class="project-card">
                 <img
-                  className="project-img"
+                  class="project-img"
                   src="./assets/images/movielist.gif"
                   alt="project-Movielist"
                 />
                 <h3>Movie List App</h3>
                 <h5>Project Description</h5>
                 <p>
-                  A React-based application to create and manage a personal movie watchlist with local storage integration for saving data.
+                  A React-based application to create and manage a personal movie watchlist local storage integration for saving data. 
                 </p>
 
-                <div className="project-card-links">
-                  <a href="https://watch-list.vercel.app/" className="project-link">
-                    <FontAwesomeIcon icon={faLaptopCode} className="project-icons" />
+                <div class="project-card-links">
+                  <a href="https://watch-list.vercel.app/">
+                    <img
+                      class="project-icons"
+                      src="./assets/icons/live-demo.svg"
+                      alt="live-demo"
+                    />
                     Live Demo
                   </a>
-                  <a href="https://github.com/akashrawr/MovieWatchList-React.git" className="project-link">
-                    <FontAwesomeIcon icon={faGithub} className="project-icons" />
+                  <a href="https://github.com/akashrawr/MovieWatchList-React.git">
+                    <img
+                      class="project-icons"
+                      src="./assets/icons/github-icon.svg"
+                      alt="github-link"
+                    />
                     Repository
                   </a>
                 </div>
               </section>
 
+              
               {/* N-Queen Solver */}
-              <section className="project-card">
+              <section class="project-card">
                 <img
-                  className="project-img"
+                  class="project-img"
                   src="./assets/images/nqueen.gif"
                   alt="project-Nqueen"
                 />
                 <h3>N-Queen Solver</h3>
                 <h5>Project Description</h5>
                 <p>
-                  A Java-based solution to the N-Queen problem, implementing different types of algorithms to find various queen placements on a chessboard.
+                  A Java-based solution to the N-Queen problem, implementing 
+                  different types of algorithms to find various queen placements on a chessboard.
                 </p>
 
-                <div className="project-card-links">
-                  <a href="https://github.com/akashrawr/N-Queen-Solver.git" className="project-link">
-                    <FontAwesomeIcon icon={faGithub} className="project-icons" />
+                <div class="project-card-links">
+                  <a href="https://github.com/akashrawr/N-Queen-Solver.git">
+                    <img
+                      class="project-icons"
+                      src="./assets/icons/github-icon.svg"
+                      alt="github-link"
+                    />
                     Repository
                   </a>
                 </div>
               </section>
 
-              {/* Coming Soon */}
-              <section className="project-card">
-                <img
-                  className="project-img"
-                  src="./assets/images/coming-soon.gif"
-                  alt="project-Soon"
-                />
-                <h3>Project name</h3>
-                <h5>Project description</h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas ornare lorem ullamcorper gravida. In venenatis in diam ut tempor.
-                </p>
+              {/* Coming Soon*/}
+              <section class="project-card">
+                  <img
+                    class="project-img"
+                    src="./assets/images/coming-soon.gif"
+                    alt="project-Soon"
+                  />
+                  <h3>Project name</h3>
+                  <h5>Project description</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque egestas ornare lorem ullamcorper gravida. In
+                    venenatis in diam ut tempor.
+                  </p>
+                  <div className="project-card-links">
+      <a href="#" className="project-link">
+        <FaExternalLinkAlt className="project-icons" />
+        Live demo
+      </a>
+      <a href="#" className="project-link">
+        <FaGithub className="project-icons" />
+        Repository
+      </a>
+    </div>
+                </section>
 
-                <div className="project-card-links">
-                  <a href="#" className="project-link">
-                    <FontAwesomeIcon icon={faLaptopCode} className="project-icons" />
-                    Live Demo
-                  </a>
-                  <a href="#" className="project-link">
-                    <FontAwesomeIcon icon={faGithub} className="project-icons" />
-                    Repository
-                  </a>
-                </div>
-              </section>
 
             </div>
             {/* End of Project Container */}
@@ -378,35 +420,54 @@ function Portfolio() {
   );
 }
 
+
+
 function Contact() {
   return (
     <section id="contact">
       <h2 className="section-highlight" data-aos="fade-up">Contacts</h2>
       <div className="contact-container" data-aos="fade-up">
         <div className="contact-card">
-          <h2>Contacts</h2>
+          <h2> Contacts</h2>
           <p>You can contact me directly through these links</p>
 
           <div className="contact-links">
-            <a href="https://www.instagram.com/_acnologxa" className="contact-link">
-              <FontAwesomeIcon icon={faInstagram} className="contact-icons" />
+            <a href="https://www.instagram.com/_acnologxa">
+              <img
+                className="contact-icons"
+                src="./assets/icons/instagram.svg"
+                alt="Instagram-icon"
+              />
               Instagram
             </a>
 
-            <a href="mailto:akashkm553@gmail.com" className="contact-link">
-              <FontAwesomeIcon icon={faEnvelope} className="contact-icons" />
-              Email
+            <a href="mailto:akashkm553@gmail.com">
+            <img
+              className="contact-icons"
+              src="./assets/icons/email.svg"
+              alt="email-icon"
+            />
+            Email
             </a>
 
-            <a href="https://www.linkedin.com/in/akashmishra-rawr" className="contact-link">
-              <FontAwesomeIcon icon={faLinkedin} className="contact-icons" />
+            <a href="https://www.linkedin.com/in/akashmishra-rawr">
+              <img
+                className="contact-icons"
+                src="./assets/icons/linkedin-icon.svg"
+                alt="linkedin-icon"
+              />
               LinkedIn
             </a>
 
-            <a href="https://github.com/akashrawr" className="contact-link">
-              <FontAwesomeIcon icon={faGithub} className="contact-icons" />
+            <a href="https://github.com/akashrawr">
+              <img
+                className="contact-icons"
+                src="./assets/icons/github.svg"
+                alt="Github-icon"
+              />
               Github
             </a>
+
           </div>
         </div>
       </div>
