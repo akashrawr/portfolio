@@ -5,7 +5,8 @@ import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faJava, faHtml5, faJs, faPython, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { SiTypescript, SiCplusplus } from 'react-icons/si';
-import { faLaptopCode, faEnvelope, faAngleDoubleRight, faAnglesLeft } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 
 
 function App() {
@@ -173,8 +174,6 @@ function About() {
   );
 }
 
-
-
 const projects = [
   {
     imgSrc: './assets/images/SMS.gif',
@@ -236,7 +235,6 @@ const projects = [
     liveDemoLink: '#',
   },
 ];
-
 
 function Portfolio() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -302,22 +300,21 @@ function Portfolio() {
 
             {/* Pagination Controls */}
             <div className="pagination">
-              <a href="#!" onClick={handlePrevious} disabled={currentPage === 1}>
-                <FontAwesomeIcon icon={faAnglesLeft} />
-              </a>
+              <button onClick={handlePrevious} disabled={currentPage === 1}>
+                &lt;
+              </button>
               {[...Array(totalPages)].map((_, index) => (
-                <a
+                <button
                   key={index + 1}
-                  href="#!"
                   onClick={() => handlePageClick(index + 1)}
                   className={currentPage === index + 1 ? 'active' : ''}
                 >
                   {index + 1}
-                </a>
+                </button>
               ))}
-              <a href="#!" onClick={handleNext} disabled={currentPage === totalPages}>
-                <FontAwesomeIcon icon={faAngleDoubleRight} />
-              </a>
+              <button onClick={handleNext} disabled={currentPage === totalPages}>
+                &gt;
+              </button>
             </div>
           </div>
         </div>
@@ -325,6 +322,9 @@ function Portfolio() {
     </section>
   );
 }
+
+
+
 function Contact() {
   return (
     <section id="contact">

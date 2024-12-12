@@ -5,7 +5,8 @@ import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faJava, faHtml5, faJs, faPython, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { SiTypescript, SiCplusplus } from 'react-icons/si';
-import { faLaptopCode, faEnvelope, faAngleDoubleRight, faAnglesLeft } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 
 
 function App() {
@@ -237,7 +238,6 @@ const projects = [
   },
 ];
 
-
 function Portfolio() {
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 4;
@@ -303,7 +303,7 @@ function Portfolio() {
             {/* Pagination Controls */}
             <div className="pagination">
               <a href="#!" onClick={handlePrevious} disabled={currentPage === 1}>
-                <FontAwesomeIcon icon={faAnglesLeft} />
+                &lt;
               </a>
               {[...Array(totalPages)].map((_, index) => (
                 <a
@@ -316,7 +316,7 @@ function Portfolio() {
                 </a>
               ))}
               <a href="#!" onClick={handleNext} disabled={currentPage === totalPages}>
-                <FontAwesomeIcon icon={faAngleDoubleRight} />
+                &gt;
               </a>
             </div>
           </div>
@@ -325,6 +325,11 @@ function Portfolio() {
     </section>
   );
 }
+
+
+
+
+
 function Contact() {
   return (
     <section id="contact">

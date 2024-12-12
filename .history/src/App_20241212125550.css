@@ -808,7 +808,7 @@ input:not(:checked) + .slider .icon {
 }
 
 .pagination a.active {
-  background-color: #395b64;
+  background-color: #4CAF50;
   color: white;
 }
 

@@ -325,6 +325,9 @@ function Portfolio() {
     </section>
   );
 }
+
+
+
 function Contact() {
   return (
     <section id="contact">

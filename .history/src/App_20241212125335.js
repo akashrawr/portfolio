@@ -303,7 +303,7 @@ function Portfolio() {
             {/* Pagination Controls */}
             <div className="pagination">
               <a href="#!" onClick={handlePrevious} disabled={currentPage === 1}>
-                <FontAwesomeIcon icon={faAnglesLeft} />
+                <FontAwesomeIcon icon={faAnglesLeft} className="project-icons" />
               </a>
               {[...Array(totalPages)].map((_, index) => (
                 <a
@@ -316,7 +316,7 @@ function Portfolio() {
                 </a>
               ))}
               <a href="#!" onClick={handleNext} disabled={currentPage === totalPages}>
-                <FontAwesomeIcon icon={faAngleDoubleRight} />
+                <FontAwesomeIcon icon={faAngleDoubleRight} className="project-icons" />
               </a>
             </div>
           </div>
@@ -325,6 +325,9 @@ function Portfolio() {
     </section>
   );
 }
+
+
+
 function Contact() {
   return (
     <section id="contact">

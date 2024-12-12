@@ -793,26 +793,32 @@ input:not(:checked) + .slider .icon {
   color: var(--icon-1);
 }
 
-
-.pagination {
+.pagination-controls {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-top: 1rem;
 }
 
-.pagination a {
-  color: var(--neutral-4);
-  padding: 8px 16px;
-  text-decoration: none;
+.pagination-controls button {
+  background-color: var(--primary-color);
+  color: var(--accent-1);
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  cursor: pointer;
 }
 
-.pagination a.active {
-  background-color: #395b64;
+.pagination-controls button.active {
+  background-color: var(--accent-2);
   color: white;
 }
 
-.pagination a:disabled {
-  color: grey;
-  pointer-events: none;
+.pagination-controls button:disabled {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
 }
+
+
+
+
+

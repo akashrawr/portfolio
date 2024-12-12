@@ -384,6 +384,7 @@ section {
 #portfolio {
   padding: 2rem;
   animation: fade-in 500ms linear forwards;
+  align-items:center
 }
 
 .portfolio-container {
@@ -793,22 +794,19 @@ input:not(:checked) + .slider .icon {
   color: var(--icon-1);
 }
 
-
 .pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
+  display: inline-block;
 }
 
 .pagination a {
-  color: var(--neutral-4);
+  color: black;
+  float: left;
   padding: 8px 16px;
   text-decoration: none;
 }
 
 .pagination a.active {
-  background-color: #395b64;
+  background-color: #4CAF50;
   color: white;
 }
 
@@ -816,3 +814,5 @@ input:not(:checked) + .slider .icon {
   color: grey;
   pointer-events: none;
 }
+
+.pagination a:hover:not(.active) {background-color: #ddd;}

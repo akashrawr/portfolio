@@ -5,7 +5,8 @@ import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faJava, faHtml5, faJs, faPython, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { SiTypescript, SiCplusplus } from 'react-icons/si';
-import { faLaptopCode, faEnvelope, faAngleDoubleRight, faAnglesLeft } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 
 
 function App() {
@@ -174,157 +175,9 @@ function About() {
 }
 
 
-
-const projects = [
-  {
-    imgSrc: './assets/images/SMS.gif',
-    altText: 'project-SMS',
-    title: 'Student Management System',
-    description: 'This is an application built using Spring Boot, adhering to MVC architecture. It provides functionalities for managing student records.',
-    repoLink: 'https://github.com/akashrawr/Student-Management-System-Springboot.git',
-  },
-  {
-    imgSrc: './assets/images/health.gif',
-    altText: 'project-Health',
-    title: 'Health Appointment Website',
-    description: 'A user-friendly web application built using ASP.NET, designed to manage patient appointments efficiently.',
-    repoLink: 'https://github.com/akashrawr/Medical_Website.git',
-  },
-  {
-    imgSrc: './assets/images/chess.gif',
-    altText: 'project-Chess',
-    title: 'Chess',
-    description: 'A Java RMI-based chess game capable of hosting up to six players simultaneously.',
-    repoLink: 'https://github.com/akashrawr/ChessRMI.git',
-  },
-  {
-    imgSrc: './assets/images/rps.gif',
-    altText: 'project-RPS',
-    title: 'Rock-Paper-Scissors',
-    description: 'A multiplayer game using Java RMI, allowing two players to compete in real-time and a MySQL database for user tracking.',
-    repoLink: 'https://github.com/akashrawr/RockPaperScissors-RMI.git',
-  },
-  {
-    imgSrc: './assets/images/weather.gif',
-    altText: 'project-Weather-App',
-    title: 'Weather App',
-    description: 'A weather forecasting application built using React and TypeScript. It utilizes an external API to fetch real-time weather data.',
-    repoLink: 'https://weatherapp-react-ts.vercel.app/',
-    liveDemoLink: 'https://github.com/akashrawr/WeatherApp-React-TS.git',
-  },
-  {
-    imgSrc: './assets/images/movielist.gif',
-    altText: 'project-Movielist',
-    title: 'Movie List App',
-    description: 'A React-based application to create and manage a personal movie watchlist with local storage integration for saving data.',
-    repoLink: 'https://github.com/akashrawr/MovieWatchList-React.git',
-    liveDemoLink: 'https://watch-list.vercel.app/',
-  },
-  {
-    imgSrc: './assets/images/nqueen.gif',
-    altText: 'project-Nqueen',
-    title: 'N-Queen Solver',
-    description: 'A Java-based solution to the N-Queen problem, implementing different types of algorithms to find various queen placements on a chessboard.',
-    repoLink: 'https://github.com/akashrawr/N-Queen-Solver.git',
-  },
-  {
-    imgSrc: './assets/images/coming-soon.gif',
-    altText: 'project-Soon',
-    title: 'Project Name',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas ornare lorem ullamcorper gravida. In venenatis in diam ut tempor.',
-    repoLink: '#',
-    liveDemoLink: '#',
-  },
-];
+const projects = [ { imgSrc: './assets/images/SMS.gif', altText: 'project-SMS', title: 'Student Management System', description: 'This is an application built using Spring Boot, adhering to MVC architecture. It provides functionalities for managing student records.', repoLink: 'https://github.com/akashrawr/Student-Management-System-Springboot.git', }, { imgSrc: './assets/images/health.gif', altText: 'project-Health', title: 'Health Appointment Website', description: 'A user-friendly web application built using ASP.NET, designed to manage patient appointments efficiently.', repoLink: 'https://github.com/akashrawr/Medical_Website.git', }, { imgSrc: './assets/images/chess.gif', altText: 'project-Chess', title: 'Chess', description: 'A Java RMI-based chess game capable of hosting up to six players simultaneously.', repoLink: 'https://github.com/akashrawr/ChessRMI.git', }, { imgSrc: './assets/images/rps.gif', altText: 'project-RPS', title: 'Rock-Paper-Scissors', description: 'A multiplayer game using Java RMI, allowing two players to compete in real-time and a MySQL database for user tracking.', repoLink: 'https://github.com/akashrawr/RockPaperScissors-RMI.git', }, { imgSrc: './assets/images/weather.gif', altText: 'project-Weather-App', title: 'Weather App', description: 'A weather forecasting application built using React and TypeScript. It utilizes an external API to fetch real-time weather data.', repoLink: 'https://weatherapp-react-ts.vercel.app/', liveDemoLink: 'https://github.com/akashrawr/WeatherApp-React-TS.git', }, { imgSrc: './assets/images/movielist.gif', altText: 'project-Movielist', title: 'Movie List App', description: 'A React-based application to create and manage a personal movie watchlist with local storage integration for saving data.', repoLink: 'https://github.com/akashrawr/MovieWatchList-React.git', liveDemoLink: 'https://watch-list.vercel.app/', }, { imgSrc: './assets/images/nqueen.gif', altText: 'project-Nqueen', title: 'N-Queen Solver', description: 'A Java-based solution to the N-Queen problem, implementing different types of algorithms to find various queen placements on a chessboard.', repoLink: 'https://github.com/akashrawr/N-Queen-Solver.git', }, { imgSrc: './assets/images/coming-soon.gif', altText: 'project-Soon', title: 'Project Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas ornare lorem ullamcorper gravida. In venenatis in diam ut tempor.', repoLink: '#', liveDemoLink: '#', }, ]; function Portfolio() { const [currentPage, setCurrentPage] = useState(1); const projectsPerPage = 4; // Calculate total pages const totalPages = Math.ceil(projects.length / projectsPerPage); // Calculate current projects to display const indexOfLastProject = currentPage * projectsPerPage; const indexOfFirstProject = indexOfLastProject - projectsPerPage; const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject); const handleNext = () => { setCurrentPage((prevPage) => (prevPage < totalPages ? prevPage + 1 : prevPage)); }; const handlePrevious = () => { setCurrentPage((prevPage) => (prevPage > 1 ? prevPage - 1 : prevPage)); }; const handlePageClick = (page) => { setCurrentPage(page); }; return ( <section id="portfolio"> <div className="section-highlight" data-aos="fade-up"> Portfolio </div> <div className="portfolio-container" data-aos="fade-up"> <div className="portfolio-card"> <div className="portfolio-content"> <h2>Portfolio</h2> {/* Project Container */} <div className="project-container"> {currentProjects.map((project, index) => ( <section className="project-card" key={index}> <img className="project-img" src={project.imgSrc} alt={project.altText} /> <h3>{project.title}</h3> <h5>Project Description</h5> <p>{project.description}</p> <div className="project-card-links"> <a href={project.repoLink} className="project-link"> <FontAwesomeIcon icon={faGithub} className="project-icons" /> Repository </a> {project.liveDemoLink && ( <a href={project.liveDemoLink} className="project-link"> <FontAwesomeIcon icon={faLaptopCode} className="project-icons" /> Live Demo </a> )} </div> </section> ))} </div> {/* End of Project Container */} {/* Pagination Controls */} <div className="pagination-controls"> <button onClick={handlePrevious} disabled={currentPage === 1}> &lt; </button> {[...Array(totalPages)].map((_, index) => ( <button key={index + 1} onClick={() => handlePageClick(index + 1)} className={currentPage === index + 1 ? 'active' : ''} > {index + 1} </button> ))} <button onClick={handleNext} disabled={currentPage === totalPages}> &gt; </button> </div> </div> </div> </div> </section>
 
 
-function Portfolio() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 4;
-
-  // Calculate total pages
-  const totalPages = Math.ceil(projects.length / projectsPerPage);
-
-  // Calculate current projects to display
-  const indexOfLastProject = currentPage * projectsPerPage;
-  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
-  const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
-
-  const handleNext = () => {
-    setCurrentPage((prevPage) => (prevPage < totalPages ? prevPage + 1 : prevPage));
-  };
-
-  const handlePrevious = () => {
-    setCurrentPage((prevPage) => (prevPage > 1 ? prevPage - 1 : prevPage));
-  };
-
-  const handlePageClick = (page) => {
-    setCurrentPage(page);
-  };
-
-  return (
-    <section id="portfolio">
-      <div className="section-highlight" data-aos="fade-up">
-        Portfolio
-      </div>
-      <div className="portfolio-container" data-aos="fade-up">
-        <div className="portfolio-card">
-          <div className="portfolio-content">
-            <h2>Portfolio</h2>
-            {/* Project Container */}
-            <div className="project-container">
-              {currentProjects.map((project, index) => (
-                <section className="project-card" key={index}>
-                  <img
-                    className="project-img"
-                    src={project.imgSrc}
-                    alt={project.altText}
-                  />
-                  <h3>{project.title}</h3>
-                  <h5>Project Description</h5>
-                  <p>{project.description}</p>
-                  <div className="project-card-links">
-                    <a href={project.repoLink} className="project-link">
-                      <FontAwesomeIcon icon={faGithub} className="project-icons" />
-                      Repository
-                    </a>
-                    {project.liveDemoLink && (
-                      <a href={project.liveDemoLink} className="project-link">
-                        <FontAwesomeIcon icon={faLaptopCode} className="project-icons" />
-                        Live Demo
-                      </a>
-                    )}
-                  </div>
-                </section>
-              ))}
-            </div>
-            {/* End of Project Container */}
-
-            {/* Pagination Controls */}
-            <div className="pagination">
-              <a href="#!" onClick={handlePrevious} disabled={currentPage === 1}>
-                <FontAwesomeIcon icon={faAnglesLeft} />
-              </a>
-              {[...Array(totalPages)].map((_, index) => (
-                <a
-                  key={index + 1}
-                  href="#!"
-                  onClick={() => handlePageClick(index + 1)}
-                  className={currentPage === index + 1 ? 'active' : ''}
-                >
-                  {index + 1}
-                </a>
-              ))}
-              <a href="#!" onClick={handleNext} disabled={currentPage === totalPages}>
-                <FontAwesomeIcon icon={faAngleDoubleRight} />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 function Contact() {
   return (
     <section id="contact">
