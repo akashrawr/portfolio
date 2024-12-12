@@ -209,7 +209,7 @@ section {
 /* HERO SECTION */
 #hero {
   background-color: var(--primary-color);
-  border-bottom: 4px solid var(--icon-1);
+  border-bottom: 4px solid var(yellow);
   padding: 2.2rem;
 }
 
@@ -220,6 +220,7 @@ section {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  border-bottom: 4px solid var(yellow);
 }
 
 /* Text Container */

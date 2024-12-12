@@ -209,7 +209,7 @@ section {
 /* HERO SECTION */
 #hero {
   background-color: var(--primary-color);
-  border-bottom: 4px solid var(--icon-1);
+  border-bottom: 4px solid var(--secondary-color);
   padding: 2.2rem;
 }
 
