@@ -146,13 +146,10 @@ h1 {
 @media only screen and (max-width: 35em) {
   .primary-nav {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 150px; /* Fixed width of 200px */
-
+    inset: 0 0 0 0;
     flex-direction: column;
-    padding: min(15vh, 3rem) 1rem;
+
+    padding: min(30vh, 6rem) 2rem;
     background-color: var(--primary-color);
 
     z-index: 9999;

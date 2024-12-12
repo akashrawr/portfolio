@@ -149,7 +149,7 @@ h1 {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 150px; /* Fixed width of 200px */
+    width: 200px; /* Fixed width of 200px */
 
     flex-direction: column;
     padding: min(15vh, 3rem) 1rem;
