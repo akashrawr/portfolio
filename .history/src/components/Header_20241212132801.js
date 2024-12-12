@@ -9,6 +9,22 @@ function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
           <h1>Rawr</h1>
         </div>
 
+        <label className="switch" aria-label="Toggle dark mode">
+          <input
+            type="checkbox"
+            checked={darkMode}
+            onChange={toggleDarkMode}
+            aria-checked={darkMode}
+          />
+          <span className="slider round">
+            {!darkMode ? (
+              <img className="icon" src="./assets/icons/sun.svg" alt="Light Mode" />
+            ) : (
+              <img className="icon" src="./assets/icons/moon.svg" alt="Dark Mode" />
+            )}
+          </span>
+        </label>
+
         <button
           className="mobile-nav-toggle"
           aria-controls="primary-nav"
@@ -31,23 +47,6 @@ function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
           </li>
           <li>
             <a className="nav-link" href="#contact" onClick={toggleNav}>Contact</a>
-          </li>
-          <li>
-            <label className="switch" aria-label="Toggle dark mode">
-              <input
-                type="checkbox"
-                checked={darkMode}
-                onChange={toggleDarkMode}
-                aria-checked={darkMode}
-              />
-              <span className="slider round">
-                {!darkMode ? (
-                  <img className="icon" src="./assets/icons/sun.svg" alt="Light Mode" />
-                ) : (
-                  <img className="icon" src="./assets/icons/moon.svg" alt="Dark Mode" />
-                )}
-              </span>
-            </label>
           </li>
         </ul>
       </nav>

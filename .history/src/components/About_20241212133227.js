@@ -1,8 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faJava, faHtml5, faJs, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faJava, faHtml5, faJs, faPython, faDatabase } from '@fortawesome/free-brands-svg-icons';
 import { SiTypescript, SiCplusplus } from 'react-icons/si';
-import { faDatabase } from '@fortawesome/free-solid-svg-icons'; 
 
 function About() {
   return (

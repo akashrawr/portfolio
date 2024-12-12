@@ -149,23 +149,21 @@ h1 {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 125px;
-  
+    width: 150px; /* Fixed width of 200px */
+
     flex-direction: column;
     padding: min(15vh, 3rem) 1rem;
     background-color: var(--primary-color);
-    border-left: 2px solid rgb(111, 111, 111); /* Add this line for the left border */
-  
+
     z-index: 9999;
-  
+
     transform: translateX(100%);
     transition: transform 350ms ease-out;
   }
-  
 
   .nav-link:link,
   .nav-link:visited {
-    font-size: 15px;
+    font-size: 20px;
     color: var(--accent-1);
   }
 
@@ -206,6 +204,7 @@ section {
   position: relative;
 }
 
+/* HERO */
 /* HERO SECTION */
 #hero {
   background-color: var(--primary-color);
@@ -853,27 +852,4 @@ input:not(:checked) + .slider .icon {
 .pagination a:disabled {
   color: grey;
   pointer-events: none;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .pagination a {
-    padding: 6px 12px; /* Smaller padding for smaller screens */
-    font-size: 0.9rem; /* Slightly smaller font size */
-  }
-
-  .pagination {
-    margin-top: 0.75rem; /* Adjust margin top for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .pagination a {
-    padding: 4px 8px; /* Even smaller padding for very small screens */
-    font-size: 0.8rem; /* Smaller font size for very small screens */
-  }
-
-  .pagination {
-    margin-top: 0.5rem; /* Adjust margin top for very small screens */
-  }
 }

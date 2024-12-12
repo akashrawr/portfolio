@@ -154,7 +154,7 @@ h1 {
     flex-direction: column;
     padding: min(15vh, 3rem) 1rem;
     background-color: var(--primary-color);
-    border-left: 2px solid rgb(111, 111, 111); /* Add this line for the left border */
+    border-left: 2px solid blue; /* Add this line for the left border */
   
     z-index: 9999;
   

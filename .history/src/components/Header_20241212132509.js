@@ -2,6 +2,11 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
+
+  const toggleNav = () => {
+    setIsNavVisible(!isNavVisible);
+  };
+  
   return (
     <header>
       <nav className="navbar-nav">
@@ -14,9 +19,7 @@ function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
           aria-controls="primary-nav"
           aria-expanded={isNavVisible}
           onClick={toggleNav}
-        >
-          <FontAwesomeIcon icon="fa-solid fa-angles-left" />
-        </button>
+        ></button>
 
         <ul
           id="primary-nav"
@@ -24,13 +27,13 @@ function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
           data-visible={isNavVisible}
         >
           <li>
-            <a className="nav-link" href="#about" onClick={toggleNav}>About</a>
+            <a className="nav-link" href="#about">About</a>
           </li>
           <li>
-            <a className="nav-link" href="#portfolio" onClick={toggleNav}>Portfolio</a>
+            <a className="nav-link" href="#portfolio">Portfolio</a>
           </li>
           <li>
-            <a className="nav-link" href="#contact" onClick={toggleNav}>Contact</a>
+            <a className="nav-link" href="#contact">Contact</a>
           </li>
           <li>
             <label className="switch" aria-label="Toggle dark mode">
