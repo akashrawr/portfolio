@@ -51,6 +51,14 @@ export const projects = [
       repoLink: 'https://github.com/akashrawr/N-Queen-Solver.git',
     },
     {
+      imgSrc: './assets/images/hotel.gif',
+      altText: 'Serenity-hotel',
+      title: 'Serenity Hotel',
+      description: 'A full-stack Hotel Room Booking project using React.js and Spring Boot, focusing on JWT authentication, MySQL, and AWS.',
+      repoLink: 'https://github.com/akashrawr/Serenity-Hotel.git',
+      liveDemoLink: 'https://serenity-hotel.vercel.app',
+    },
+    {
       imgSrc: './assets/images/coming-soon.gif',
       altText: 'project-Soon',
       title: 'Project Name',
