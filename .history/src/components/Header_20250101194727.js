@@ -33,10 +33,16 @@ function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
             <a className="nav-link" href="#contact" onClick={toggleNav}>Contact</a>
           </li>
           <li>
-          {/* User Login Button */}
-          <svg class="user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M 12 3 A 4 4 0 0 0 8 7 A 4 4 0 0 0 12 11 A 4 4 0 0 0 16 7 A 4 4 0 0 0 12 3 z M 12 14 C 8.996 14 3 15.508 3 18.5 L 3 20 C 3 20.552 3.448 21 4 21 L 20 21 C 20.552 21 21 20.552 21 20 L 21 18.5 C 21 15.508 15.004 14 12 14 z"/>
-          </svg>
+            <button
+              className="user-login-button"
+              aria-label="User Login"
+              onClick={handleLoginClick}
+              style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+            >
+              <svg className="user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M 12 3 A 4 4 0 0 0 8 7 A 4 4 0 0 0 12 11 A 4 4 0 0 0 16 7 A 4 4 0 0 0 12 3 z M 12 14 C 8.996 14 3 15.508 3 18.5 L 3 20 C 3 20.552 3.448 21 4 21 L 20 21 C 20.552 21 21 20.552 21 20 L 21 18.5 C 21 15.508 15.004 14 12 14 z" />
+              </svg>
+            </button>
           </li>
           <li>
             <label className="switch" aria-label="Toggle dark mode">

@@ -123,16 +123,19 @@ h1 {
   color: var(--accent-1);
 }
 
-.user-icon {
-  width: 24px;
-  height: 24px;
-  fill: var(--accent-1);
-  transition: fill 0.3s ease;
-}
+    /* CSS to adjust SVG color */
+    .user-icon {
+      width: 24px;
+      height: 24px;
+      fill: #3498db; /* Set the desired color */
+      transition: fill 0.3s ease; /* Optional: Add a transition effect */
+    }
 
-.user-icon:hover {
-  fill: var(--accent-1);
-}
+    /* Example: Change color on hover */
+    .user-icon:hover {
+      fill: #e74c3c; /* Hover color */
+    }
+
 
 /* Dark mode toggle button */
 .theme-toggle {

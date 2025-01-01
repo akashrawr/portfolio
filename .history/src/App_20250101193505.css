@@ -126,13 +126,15 @@ h1 {
 .user-icon {
   width: 24px;
   height: 24px;
-  fill: var(--accent-1);
+  color: var(--accent-1);
   transition: fill 0.3s ease;
 }
 
+
 .user-icon:hover {
-  fill: var(--accent-1);
+  color: var(--accent-1);
 }
+
 
 /* Dark mode toggle button */
 .theme-toggle {
