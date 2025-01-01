@@ -27,14 +27,6 @@ export const projects = [
       description: 'A Java-based solution to the N-Queen problem, implementing different types of algorithms to find various queen placements on a chessboard.',
       repoLink: 'https://github.com/akashrawr/N-Queen-Solver.git',
     },
-    {
-      imgSrc: './assets/images/coming-soon.gif',
-      altText: 'project-Soon',
-      title: 'Project Name',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas ornare lorem ullamcorper gravida. In venenatis in diam ut tempor.',
-      repoLink: '#',
-      liveDemoLink: '#',
-    },
   ];
 
   /*

@@ -20,6 +20,7 @@ export const projects = [
       description: 'A multiplayer game using Java RMI, allowing two players to compete in real-time and a MySQL database for user tracking.',
       repoLink: 'https://github.com/akashrawr/RockPaperScissors-RMI.git',
     },
+
     {
       imgSrc: './assets/images/nqueen.gif',
       altText: 'project-Nqueen',
@@ -72,6 +73,6 @@ export const projects = [
       repoLink: 'https://github.com/akashrawr/MovieWatchList-React.git',
       liveDemoLink: 'https://watch-list.vercel.app/',
     },
-
+    
 
   */

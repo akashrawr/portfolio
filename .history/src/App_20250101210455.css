@@ -299,6 +299,7 @@ section {
   .hero-main-container {
     flex-direction: column;
   }
+
   .hero-img {
     margin-top: 20px;
   }

@@ -21,6 +21,22 @@ export const projects = [
       repoLink: 'https://github.com/akashrawr/RockPaperScissors-RMI.git',
     },
     {
+      imgSrc: './assets/images/weather.gif',
+      altText: 'project-Weather-App',
+      title: 'Weather App',
+      description: 'A weather forecasting application built using React and TypeScript. It utilizes an external API to fetch real-time weather data.',
+      repoLink: 'https://weatherapp-react-ts.vercel.app/',
+      liveDemoLink: 'https://github.com/akashrawr/WeatherApp-React-TS.git',
+    },
+    {
+      imgSrc: './assets/images/movielist.gif',
+      altText: 'project-Movielist',
+      title: 'Movie List App',
+      description: 'A React-based application to create and manage a personal movie watchlist with local storage integration for saving data.',
+      repoLink: 'https://github.com/akashrawr/MovieWatchList-React.git',
+      liveDemoLink: 'https://watch-list.vercel.app/',
+    },
+    {
       imgSrc: './assets/images/nqueen.gif',
       altText: 'project-Nqueen',
       title: 'N-Queen Solver',
@@ -56,22 +72,5 @@ export const projects = [
       repoLink: 'https://github.com/akashrawr/ChessRMI.git',
     },
 
-        {
-      imgSrc: './assets/images/weather.gif',
-      altText: 'project-Weather-App',
-      title: 'Weather App',
-      description: 'A weather forecasting application built using React and TypeScript. It utilizes an external API to fetch real-time weather data.',
-      repoLink: 'https://weatherapp-react-ts.vercel.app/',
-      liveDemoLink: 'https://github.com/akashrawr/WeatherApp-React-TS.git',
-    },
-    {
-      imgSrc: './assets/images/movielist.gif',
-      altText: 'project-Movielist',
-      title: 'Movie List App',
-      description: 'A React-based application to create and manage a personal movie watchlist with local storage integration for saving data.',
-      repoLink: 'https://github.com/akashrawr/MovieWatchList-React.git',
-      liveDemoLink: 'https://watch-list.vercel.app/',
-    },
-
-
+    
   */

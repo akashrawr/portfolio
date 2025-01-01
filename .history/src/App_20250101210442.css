@@ -299,11 +299,12 @@ section {
   .hero-main-container {
     flex-direction: column;
   }
+
   .hero-img {
     margin-top: 20px;
   }
   .hero-image {
-    max-width: 75%;
+    max-width: 70%;
     height: auto;
   }
   .hero-text-container {
