@@ -29,6 +29,7 @@ function App() {
   };
 
   return (
+    <Router>
     <div>
       <Header
         isNavVisible={isNavVisible}
@@ -42,9 +43,11 @@ function App() {
         <About />
         <Portfolio />
         <Contact />
+        <LoginPage />
       </main>
       <Footer />
     </div>
+    </Router>
   );
 }
 

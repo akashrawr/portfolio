@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 // Import components
 import Header from './components/Header';
+import LoginPage from './components/LoginPage'; 
 import Hero from './components/Hero';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
@@ -29,6 +31,7 @@ function App() {
   };
 
   return (
+    <Router>
     <div>
       <Header
         isNavVisible={isNavVisible}
@@ -37,14 +40,17 @@ function App() {
         toggleDarkMode={toggleDarkMode}
       />
       <main>
-
         <Hero />
         <About />
         <Portfolio />
         <Contact />
       </main>
+      <Routes>
+            <Route path="/login" element={<LoginPage />} />
+      </Routes>
       <Footer />
     </div>
+    </Router>
   );
 }
 

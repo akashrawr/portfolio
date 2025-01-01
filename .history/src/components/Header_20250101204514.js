@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
@@ -33,7 +34,10 @@ function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
             <a className="nav-link" href="#contact" onClick={toggleNav}>Contact</a>
           </li>
           <li>
-             <button
+
+
+            <a className="nav-link" href="#login" onClick={toggleNav}>
+            <button
               className="user-login-button"
               aria-label="User Login"
               to="/login" 
@@ -52,6 +56,8 @@ function Header({ isNavVisible, toggleNav, darkMode, toggleDarkMode }) {
                 <path d="M12 3a4 4 0 100 8 4 4 0 000-8zm0 11c-3.004 0-9 1.508-9 4.5V20a1 1 0 001 1h16a1 1 0 001-1v-1.5c0-2.992-5.996-4.5-9-4.5z" />
               </svg>
             </button>
+            
+            </a> 
          
           </li>
           <li>

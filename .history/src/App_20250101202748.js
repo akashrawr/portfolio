@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -37,7 +39,6 @@ function App() {
         toggleDarkMode={toggleDarkMode}
       />
       <main>
-
         <Hero />
         <About />
         <Portfolio />
