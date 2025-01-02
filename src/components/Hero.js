@@ -1,6 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import supabase from '../utils/supabaseClient';  // Adjust path if in 'utils'
+
 
 function Hero() {
+  const [heroImage, setHeroImage] = useState(null);
+
+  useEffect(() => {
+    const fetchHeroImage = async () => {
+      const { data, error } = await supabase
+        .from('hero')
+        .select('image_path')
+        .limit(1);
+
+      if (error) {
+        console.error('Error fetching hero image:', error);
+      } else {
+        setHeroImage(data[0]?.image_path);
+      }
+    };
+
+    fetchHeroImage();
+  }, []);
+
   return (
     <section id="hero">
       <div className="hero-main-container">
@@ -18,7 +39,11 @@ function Hero() {
 
         {/* Image Container */}
         <div className="hero-img" data-aos="fade-up">
-          <img className="hero-image" src="./assets/images/akash.jpg" alt="akash" />
+          {heroImage ? (
+            <img className="hero-image" src={heroImage} alt="Akash" />
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
       </div>
     </section>

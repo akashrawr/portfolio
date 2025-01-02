@@ -293,6 +293,10 @@ section {
   box-shadow: 4px 4px 0px var(--accent-1);
 }
 
+.hero-img p{
+color:white;
+}
+
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {

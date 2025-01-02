@@ -1,12 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLaptopCode, faAngleDoubleRight, faAnglesLeft } from '@fortawesome/free-solid-svg-icons';
-import { projects } from '../data/projects';
+import supabase from '../utils/supabaseClient';  // Adjust path if in 'utils'
 
 function Portfolio() {
+  const [projects, setProjects] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 4;
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const { data, error } = await supabase
+        .from('portfolio')
+        .select('*')
+        .order('id', { ascending: true }); // First fetch data in ascending order by id.
+
+      if (error) {
+        console.error('Error fetching projects:', error);
+      } else {
+        // Sort the projects manually to match your custom order
+        const customOrder = [5, 4, 3, 2, 1]; // Custom order for IDs
+        const sortedProjects = customOrder.map(id => data.find(project => project.id === id));
+
+        setProjects(sortedProjects);
+      }
+    };
+
+    fetchProjects();
+  }, []);
 
   // Calculate total pages
   const totalPages = Math.ceil(projects.length / projectsPerPage);
@@ -43,19 +65,20 @@ function Portfolio() {
                 <section className="project-card" key={index}>
                   <img
                     className="project-img"
-                    src={project.imgSrc}
-                    alt={project.altText}
+                    src={project.image_path}
+                    alt={project.title}
                   />
                   <h3>{project.title}</h3>
                   <h5>Project Description</h5>
                   <p>{project.description}</p>
                   <div className="project-card-links">
-                    <a href={project.repoLink} className="project-link">
+                    <a href={project.repo_link} className="project-link">
                       <FontAwesomeIcon icon={faGithub} className="project-icons" />
                       Repository
                     </a>
-                    {project.liveDemoLink && (
-                      <a href={project.liveDemoLink} className="project-link">
+                    {/* Only show Live Demo if the link exists */}
+                    {project.live_demo_link && project.live_demo_link !== '' && (
+                      <a href={project.live_demo_link} className="project-link">
                         <FontAwesomeIcon icon={faLaptopCode} className="project-icons" />
                         Live Demo
                       </a>
